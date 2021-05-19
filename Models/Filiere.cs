@@ -15,7 +15,7 @@ namespace pfe.Models
 
         [Key]
         public int idFiliere { get; set; }
-
+        [Required]
         public Fil nomFiliere { get; set; }
 
         public ICollection<Student> students { get; set; }

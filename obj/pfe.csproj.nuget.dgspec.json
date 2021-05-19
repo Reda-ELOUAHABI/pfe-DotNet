@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reda El Ouahabi\\Documents\\Visual Studio 2019\\pfe\\pfe.csproj": {}
+    "C:\\Users\\Reda El Ouahabi\\Desktop\\pfe\\pfe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reda El Ouahabi\\Documents\\Visual Studio 2019\\pfe\\pfe.csproj": {
+    "C:\\Users\\Reda El Ouahabi\\Desktop\\pfe\\pfe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reda El Ouahabi\\Documents\\Visual Studio 2019\\pfe\\pfe.csproj",
+        "projectUniqueName": "C:\\Users\\Reda El Ouahabi\\Desktop\\pfe\\pfe.csproj",
         "projectName": "pfe",
-        "projectPath": "C:\\Users\\Reda El Ouahabi\\Documents\\Visual Studio 2019\\pfe\\pfe.csproj",
+        "projectPath": "C:\\Users\\Reda El Ouahabi\\Desktop\\pfe\\pfe.csproj",
         "packagesPath": "C:\\Users\\Reda El Ouahabi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reda El Ouahabi\\Documents\\Visual Studio 2019\\pfe\\obj\\",
+        "outputPath": "C:\\Users\\Reda El Ouahabi\\Desktop\\pfe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Reda El Ouahabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
