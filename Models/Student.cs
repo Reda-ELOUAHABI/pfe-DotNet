@@ -11,20 +11,34 @@ namespace pfe.Models
 
         [Key]
         public int Id { get; set; }
+        [Required]
         public string cne { get; set; }
+        [Required]
         public string cin { get; set; }
-
+        [Required]
         public string nom { get; set; }
-        public string tel { get; set; }
-        public string email { get; set; }
+        [Required]
         public string prenom { get; set; }
+
+        [Required]
+        public string email { get; set; }
+        [Required]
         public DateTime dateNaissance { get; set; }
+        [Required]
         public string genre { get; set; }
-        public string matricule { get; set; }
+
+        /*        [Required]
+                public string matricule { get; set; }*/
+
+        [Required]
         public string telephone { get; set; }
-        public Filiere filiere { get; set; }
+        [Required]
         public string promotion { get; set; }
-        public Stage stage { get; set; }
+        [Required]
+        public Filiere filiere { get; set; }
+
+#nullable enable
+        public Stage? stage { get; set; }
 
 
 

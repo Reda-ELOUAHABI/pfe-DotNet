@@ -20,9 +20,38 @@ namespace pfe.Controllers
         }
 
         // GET: Students
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
-            return View(await _context.Student.ToListAsync());
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date-desc" : "Date";
+            ViewData["CurrentFilter"] = searchString;
+
+            var students = from s in _context.Student
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.nom.Contains(searchString)
+                || s.prenom.Contains(searchString));
+
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(s => s.prenom);
+                    break;
+                case "Date":
+                    students = students.OrderBy(s => s.dateNaissance);
+                    break;
+                case "date_desc":
+                    students = students.OrderByDescending(s => s.dateNaissance);
+                    break;
+                default:
+                    students = students.OrderByDescending(s => s.nom);
+                    break;
+            }
+            return View(await students.AsNoTracking().ToListAsync());
+            // return View(await _context.Students.ToListAsync());
         }
 
         // GET: Students/Details/5
@@ -54,27 +83,14 @@ namespace pfe.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,cne,cin,nom,tel,email,prenom,dateNaissance,genre,matricule,telephone,promotion")] Student student)
+        public async Task<IActionResult> Create([Bind("Id,cne,cin,nom,prenom,email,dateNaissance,genre,telephone,promotion")] Student student)
         {
-
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    _context.Add(student);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
+                _context.Add(student);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            catch (DbUpdateException /* ex */)
-            {
-                //log the error (uncomment ex variable name and write a log
-                ModelState.AddModelError("", "Unable to save changes" +
-                    "try agiam . and if the probleme persists" +
-                    "see your system administrator ."
-                    );
-            }
-          
             return View(student);
         }
 
@@ -99,7 +115,7 @@ namespace pfe.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,cne,cin,nom,tel,email,prenom,dateNaissance,genre,matricule,telephone,promotion")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,cne,cin,nom,prenom,email,dateNaissance,genre,telephone,promotion")] Student student)
         {
             if (id != student.Id)
             {

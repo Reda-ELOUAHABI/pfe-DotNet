@@ -1327,11 +1327,6 @@ C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Shared\Error.c
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Create.cshtml.g.cs
-C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Delete.cshtml.g.cs
-C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Details.cshtml.g.cs
-C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Edit.cshtml.g.cs
-C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Index.cshtml.g.cs
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\pfe.RazorTargetAssemblyInfo.cache
@@ -1342,3 +1337,8 @@ C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\pfe.dll
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\ref\pfe.dll
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\pfe.pdb
 C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\pfe.genruntimeconfig.cache
+C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Create.cshtml.g.cs
+C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Delete.cshtml.g.cs
+C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Details.cshtml.g.cs
+C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Edit.cshtml.g.cs
+C:\Users\Reda El Ouahabi\Desktop\pfe\obj\Debug\net5.0\Razor\Views\Students\Index.cshtml.g.cs
