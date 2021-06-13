@@ -1,0 +1,54 @@
+﻿@model pfe.Models.Filiere
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Filiere</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomFiliere)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomFiliere)
+        </dd>
+    </dl>
+
+
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Students)
+    </dt>
+    <dd class="col-sm-10">
+        <table class="table">
+            <tr>
+                <th>NOM</th>
+                <th>PRENOM</th>
+                <th>CIN</th>
+
+            </tr>
+            @foreach (var item in Model.Students)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cin)
+            </td>
+        </tr>
+            }
+        </table>
+    </dd>
+
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FiliereId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

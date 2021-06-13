@@ -1,0 +1,90 @@
+﻿@model pfe.Models.Stage
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Stage</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateDebut)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateDebut)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateFin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateFin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EncadrantExterne)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EncadrantExterne)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrganismeAceuil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OrganismeAceuil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PaysStage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PaysStage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sujet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sujet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VilleStage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VilleStage)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Nom</th>
+
+                </tr>
+                @foreach (var item in Model.Students)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nom)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EncadrantInterne)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EncadrantInterne)
+        </dd>
+
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.StageId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
